@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "RequestLoan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>RequestLoan : <span id="spUserName"></span></h2>
+<script>callRequestLoan();</script>
+
+<table class="table" id="tblAddRequestLoan">
+    <tr>
+        <td>loanName</td>
+        <td><input type="text" class="form-control" placeholder="Enter loanName" id="loanName"></td>
+    </tr>
+    <tr>
+        <td>loanAmount</td>
+        <td><input type="text" class="form-control" placeholder="Enter loanAmount" id="loanAmount" onkeypress="return isNumberKey(event)"></td>
+    </tr>
+    <tr><td colspan="2"><button type="button" class="btn btn-primary" onclick="callRequestLoan()">Submit</button></td></tr>
+</table>
+<p id="msg" style="color:#4cff00"></p>
+<table class="table" id="tblShowRequestLoan" style="display:none;">
+    <tr>
+        <th>loanId</th>
+        <th>loanName</th>
+        <th>loanAmount</th>
+        <th>loanStatus</th>
+        <th>createdAt</th>
+        <th>requestedAt</th>
+        <th>fundedAt</th>
+    </tr>
+</table>

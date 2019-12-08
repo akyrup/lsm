@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "FundLoan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>FundLoan</h2>
+<script>
+    callFundLoan();
+</script>
+<input type="hidden" id="loanId" value="@ViewBag.loanId" />
+<input type="hidden" id="fundedBy" value="@ViewBag.fundedBy" />
+
+<table class="table" id="tblFundLoan">
+    <tr>
+        <th>loanId</th>
+        <th>loanName</th>
+        <th>loanAmount</th>
+        <th>loanStatus</th>
+        <th>createdAt</th>
+        <th>requestedAt</th>
+        <th>fundedAt</th>
+    </tr>
+</table>
+
